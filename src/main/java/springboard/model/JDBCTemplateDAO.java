@@ -112,9 +112,7 @@ public class JDBCTemplateDAO {
 			+" WHERE rNum BETWEEN "+start+" and "+end;
 		
 		return (ArrayList<SpringBbsDTO>)
-			template.query(sql, 
-				new BeanPropertyRowMapper<SpringBbsDTO>(
-				SpringBbsDTO.class));
+			template.query(sql, new BeanPropertyRowMapper<SpringBbsDTO>(SpringBbsDTO.class));
 		}
 
 	
